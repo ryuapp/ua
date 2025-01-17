@@ -1,6 +1,6 @@
 # ua
 
-Return your User-Agent.
+Returns your User-Agent.
 
 ## How to use
 
