@@ -1,11 +1,12 @@
-import { Hono } from "hono/tiny";
+export default {
+  fetch(request) {
+    const url = new URL(request.url);
+    if (url.pathname === "/") {
+      const userAgent = request.headers.get("User-Agent");
+      if (!userAgent) return new Response("No User-Agent", { status: 400 });
+      return new Response(userAgent, { status: 200 });
+    }
 
-const app = new Hono();
-
-app.get("/", (c) => {
-  const userAgent = c.req.header("User-Agent");
-  if (!userAgent) return c.text("No User-Agent");
-  return c.text(userAgent);
-});
-
-export default app;
+    return new Response("Not found", { status: 404 });
+  },
+} satisfies ExportedHandler;

@@ -1,0 +1,5 @@
+{
+  "name": "ua",
+  "compatibility_date": "2025-05-05",
+  "main": "src/index.ts"
+}
