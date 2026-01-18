@@ -5,7 +5,10 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250505.0",
-    "wrangler": "^4.14.1"
+    "@cloudflare/workers-types": "4.20250505.0",
+    "wrangler": "4.14.1"
+  },
+  "dependencies": {
+    "bowser": "2.13.1"
   }
 }
